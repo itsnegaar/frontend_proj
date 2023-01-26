@@ -1,0 +1,230 @@
+#header {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-color: rgba(28, 4, 4, 0.5);
+}
+#header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: 100%;
+}
+
+@media (max-width: 600px) {
+  #header img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#header h1 {
+  position: absolute;
+  top: calc(50% - 1em);
+  left: calc(50% - 1em);
+  float: left;
+  text-align: center;
+  color: white;
+}
+#header a {
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - 1em);
+  float: left;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+
+h1 {
+  font-size: 3em;
+  color: white;
+  animation: slideInFromLeft 1s ease-out;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: blue;
+  color: white;
+  border-radius: 4px;
+  animation: slideInFromRight 1s ease-out;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+
+
+/* --------------------------------------------- */
+
+.lectures {
+  width: calc(100% - 20px);
+  background-image:url("../images/Background.jpg");
+  background-size: cover;
+  background: linear-gradient(to left,rgba(73, 2, 84, 0.5),rgba(43, 28, 183, 0.5), rgba(13, 66, 3, 0.5)),
+    url('../images/Background.jpg');
+  background-size: cover;
+  /* box-shadow: inset 0 0 0 1000px rgba(16, 146, 46, 0.2); */
+  padding: 10px;
+  margin: 10px auto;
+  float:left;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  /* background-color: rgba(229,229,229, 0.85); */
+  width: 200px;
+  height: 300px;
+  margin: 0 20px;
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.5);
+  transition: box-shadow 0.3s ease-in-out;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgba(229, 229, 229, 0.543);
+}
+
+.card img {
+  /* background-color: rgba(229,229,229, 0.85); */
+  width: calc(100% - 120px);
+  height: calc(100% - 190px);
+  margin: 20px;
+  border-radius: 10px;
+  align-items: center;
+  /* background-color: rgba(229, 229, 229, 0.132); */
+}
+.card h2 {
+  font-size: 0.9em;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow-y: scroll;
+
+
+}
+
+.card:hover {
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/* -------------------------------- */
+
+
+
+
+
+
+.books {
+  width: calc(100% - 20px);
+  background-color: #ccc;
+  padding: 10px;
+  margin: 10px auto;
+  float:left;
+}
+.book-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+
+.flip-card {
+  background-color: transparent;
+  width: 200px;
+  height: 300px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* ------------------------------------------------------------ */
+
+.footer {
+  width: calc(100% - 20px);
+  background-color: #bbb;
+  padding: 10px;
+  margin: 10px auto;
+  float:left;
+}
+/* Media queries for responsive design */
+@media (max-width: 600px) {
+  .header, .lectures, .books, .footer {
+    width: 90%;
+    margin: 5px auto;
+  }
+  header {
+    background-size: contain;
+    background-position: top left;
+  }
+
+}
