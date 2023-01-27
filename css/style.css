@@ -47,8 +47,8 @@ h1 {
 
 button {
   padding: 8px 16px;
-  background-color: blue;
-  color: white;
+  background-color: white;
+  color: blue;
   border-radius: 4px;
   animation: slideInFromRight 1s ease-out;
 }
@@ -130,7 +130,9 @@ button {
 }
 
 .card:hover {
-  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.5); */
+  width: 250px;
+  height: 350px;
 }
 
 
