@@ -230,3 +230,15 @@ button {
   }
 
 }
+.columns{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #ccc
+}
+
+.column {
+  flex: 50%;
+  background-color: #ccc
+}
